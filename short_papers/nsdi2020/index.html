@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--Hugo Build Date: -->
+  <!--Hugo Commit Hash: -->
+  <meta name="generator" content="Hugo 0.69.2" />
+  <meta name="author" content="Archit Patke" />
+  
+  
+    
+  
+  <meta name="description" content="Modeling Communication Latency in High-speed Interconnection Networks" />
+  <meta property="og:title" content="Modeling Communication Latency in High-speed Interconnection Networks" />
+<meta property="og:description" content="Estimating performance degradation due to network congestion in data centers is important for identifying andmitigating sources/effects of contention. We propose a model-driven methodology that estimates performance degradationexperienced by applications in the presence of congestion. Using Gaussian Linear models to approximate latency from networkperformance counters we were able to correctly estimate 89% ofcompletion times within a 35% error bound." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://apatke.github.io/short_papers/nsdi2020/" />
+<meta property="article:published_time" content="2020-02-26T00:00:00-06:00" />
+<meta property="article:modified_time" content="2020-02-26T00:00:00-06:00" />
+
+  
+  <meta itemprop="name" content="Modeling Communication Latency in High-speed Interconnection Networks">
+<meta itemprop="description" content="Estimating performance degradation due to network congestion in data centers is important for identifying andmitigating sources/effects of contention. We propose a model-driven methodology that estimates performance degradationexperienced by applications in the presence of congestion. Using Gaussian Linear models to approximate latency from networkperformance counters we were able to correctly estimate 89% ofcompletion times within a 35% error bound.">
+<meta itemprop="datePublished" content="2020-02-26T00:00:00-06:00" />
+<meta itemprop="dateModified" content="2020-02-26T00:00:00-06:00" />
+<meta itemprop="wordCount" content="58">
+
+
+
+<meta itemprop="keywords" content="" />
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Modeling Communication Latency in High-speed Interconnection Networks"/>
+<meta name="twitter:description" content="Estimating performance degradation due to network congestion in data centers is important for identifying andmitigating sources/effects of contention. We propose a model-driven methodology that estimates performance degradationexperienced by applications in the presence of congestion. Using Gaussian Linear models to approximate latency from networkperformance counters we were able to correctly estimate 89% ofcompletion times within a 35% error bound."/>
+
+
+  <title>Modeling Communication Latency in High-Speed Interconnection Networks | Archit Patke</title>
+
+  <link rel="canonical" href="https://apatke.github.io/short_papers/nsdi2020/">
+  <link rel="icon" href="https://apatke.github.io/img/favicon.ico">
+  <link rel="shortcut icon" href="https://apatke.github.io/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://apatke.github.io/img/favicon.ico">
+
+  
+  <link rel="stylesheet" href="/main.min.css">
+  <link rel="preload" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css" type="text/css" as="style" onload="this.rel='stylesheet'">
+
+  
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-48086103-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+</head>
+
+
+<body>
+  <div class="padding" id="left"></div>
+
+  <div id="container">
+    <div id="sidebar">
+      <div id="enclose-sidebar">
+<div id="sidebar-content">
+  <h1><a href="https://apatke.github.io/">Archit Patke</a></h1>
+  <p>
+    PhD Student <br>
+    Electrical and Computer Engineering<br>
+    University of Illinois at Urbana-Champaign
+  </p>
+
+  <ul class="icon-list">
+  
+    <li><a href="mailto:apatke@illinois.edu"><i class="fas fa-envelope-open fa-fw"></i></a></li>
+  
+    <li><a href="https://illinois.edu/map/view?buildingId=148"><i class="fas fa-map-marker-alt fa-fw"></i></a></li>
+  
+    <li><a href="https://dblp.uni-trier.de/pers/hd/p/Patke:Archit"><i class="ai ai-dblp fa-fw"></i></a></li>
+  
+    <li><a href="https://www.linkedin.com/in/archit-patke-169a46103/"><i class="fab fa-linkedin fa-fw"></i></a></li>
+  
+    <li><a href="https://github.com/apatke"><i class="fab fa-github fa-fw"></i></a></li>
+  
+    <li><a href="https://www.facebook.com/archit.patke"><i class="fab fa-facebook fa-fw"></i></a></li>
+  
+  </ul>
+</div>
+<div id="avatar">
+  <img src="https://apatke.github.io/img/me.jpg" alt="Avatar" />
+</div>
+</div>
+    </div>
+    <div id="content">
+      
+        <ol  class="breadcrumbs">
+  
+  
+    
+  
+    
+  
+  <li>
+    
+      
+      <a href="/"><i class="fas fa-home"></i></a>
+    
+  </li>
+
+  
+  <li>
+    
+      
+      <a href="https://apatke.github.io/short_papers/">Short_papers</a>
+    
+  </li>
+
+  
+  <li>
+    
+      
+      Modeling Communication Latency in High-speed Interconnection Networks
+    
+  </li>
+
+</ol>
+
+
+
+      
+
+      
+  <div class="titlesec">
+    <h1 class="no-border">Modeling Communication Latency in High-speed Interconnection Networks</h1>
+    <h3>**Archit Patke**, Saurabh Jha, Jim Brandt, Ann Gentile, Zbigniew Kalbarczyk, and Ravishankar Iyer</h3>
+    <h3 style="color: #555;"><b><i>USENIX NSDI 2020</i></b></h3>
+    
+  </div>
+
+  <hr>
+
+  <ul class="single-paper-links">
+    
+  <li>
+    <a href="https://github.com/CSLDepend/monet" target="_blank">
+      <i class="fas fa-file-pdf" aria-hidden="true"></i>&nbsp;Paper
+    </a>
+  </li>
+
+  <li>
+    <a href="https://databank.illinois.edu/datasets/IDB-2921318" target="_blank">
+      <i class="fas fa-ad" aria-hidden="true"></i>&nbsp;Poster
+    </a>
+  </li>
+
+
+    
+
+  </ul>
+
+  <h3>Abstract</h3>
+  <p>Estimating performance degradation due to network congestion in data centers is important for identifying andmitigating sources/effects of contention. We propose a model-driven methodology that estimates performance degradationexperienced by applications in the presence of congestion. Using Gaussian Linear models to approximate latency from networkperformance counters we were able to correctly estimate 89% ofcompletion times within a 35% error bound.</p>
+
+
+  
+
+  
+
+  
+
+
+      
+
+    </div>
+  </div>
+
+  <div class="padding" id="right"></div>
+
+  
+
+<script src="https://instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

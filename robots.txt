@@ -1,0 +1,30 @@
+User-agent: *
+
+Allow: /publications/nsdi2020/index.html
+Disallow: /publications/nsdi2020/
+
+Allow: /short_papers/nsdi2020/index.html
+Disallow: /short_papers/nsdi2020/
+
+Allow: /publications/index.html
+Disallow: /publications/
+
+Allow: /short_papers/index.html
+Disallow: /short_papers/
+
+Allow: /publications/hoti2019/index.html
+Disallow: /publications/hoti2019/
+
+Allow: /projects/netscope/index.html
+Disallow: /projects/netscope/
+
+Allow: /projects/index.html
+Disallow: /projects/
+
+Disallow: /cgi-bin/
+
+Disallow: /img/
+
+Sitemap: https://apatke.github.io/sitemap.xml
+Request-rate: 1/1
+Crawl-delay: 5
