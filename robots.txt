@@ -1,10 +1,13 @@
 User-agent: *
 
-Allow: /short_papers/middleware/index.html
-Disallow: /short_papers/middleware/
+Allow: /short_papers/ipdps2022/index.html
+Disallow: /short_papers/ipdps2022/
 
 Allow: /short_papers/index.html
 Disallow: /short_papers/
+
+Allow: /short_papers/middleware2021/index.html
+Disallow: /short_papers/middleware2021/
 
 Allow: /publications/ics2021/index.html
 Disallow: /publications/ics2021/
