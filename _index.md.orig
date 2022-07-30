@@ -1,0 +1,36 @@
++++
+title = "Home"
+date = 2017-07-19
+weight = 1
+
+[sitemap]
+  priority = 1.0
++++
+
+I am a PhD student in [Computer Engineering at UIUC][ece@uiuc] advised by [Ravishankar K. Iyer][rkiyer] in the [DEPEND][depend] research group. I am interested in applying machine learning to improve performance and reliability of distributed systems.
+ 
+Previously, I have interned at [Google Network Infrastructure][gnetinfra] and [IBM Research][ibm].
+
+<<<<<<< HEAD
+=======
+Upcoming summer, I will intern at [Google Network Infrastructure][gnetinfra]. Previously, I have interned at [IBM Research][ibm].
+
+>>>>>>> af3c0b985739d3ee026093d06bd4d3aee294329b
+I am a recipient of the [Rambus Computer Engineering Fellowship][rambus].
+
+[ece@uiuc]: https://ece.illinois.edu
+[rkiyer]: https://ece.illinois.edu/about/directory/faculty/rkiyer
+[depend]: http://publish.illinois.edu/csldepend/
+[sandia]: https://sandia.gov/
+[ibm]: http://www.research.ibm.com/labs/watson/
+[next-gen]: https://researcher.watson.ibm.com/researcher/view_group.php?id=2564
+[ncsa]: http://www.ncsa.illinois.edu/
+[goldman]: https://www.goldmansachs.com/
+[larsen]: https://www.larsentoubro.com/
+[nersc]: https://www.nersc.gov/
+[gnetinfra]: https://research.google/teams/network-systems/
+<<<<<<< HEAD
+[rambus]: https://ece.illinois.edu/academics/grad/fellowships/rambus
+=======
+[rambus]: https://ece.illinois.edu/academics/grad/fellowships/rambus/
+>>>>>>> af3c0b985739d3ee026093d06bd4d3aee294329b
