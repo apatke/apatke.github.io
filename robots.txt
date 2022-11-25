@@ -1,5 +1,11 @@
 User-agent: *
 
+Allow: /publications/index.html
+Disallow: /publications/
+
+Allow: /publications/socc22/index.html
+Disallow: /publications/socc22/
+
 Allow: /short_papers/ipdps2022/index.html
 Disallow: /short_papers/ipdps2022/
 
@@ -12,14 +18,8 @@ Disallow: /short_papers/middleware2021/
 Allow: /publications/ics2021/index.html
 Disallow: /publications/ics2021/
 
-Allow: /publications/index.html
-Disallow: /publications/
-
 Allow: /publications/nsdi2020/index.html
 Disallow: /publications/nsdi2020/
-
-Allow: /short_papers/nsdi2020/index.html
-Disallow: /short_papers/nsdi2020/
 
 Allow: /publications/hoti2019/index.html
 Disallow: /publications/hoti2019/
