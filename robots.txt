@@ -1,5 +1,11 @@
 User-agent: *
 
+Allow: /short_papers/aiops2024/index.html
+Disallow: /short_papers/aiops2024/
+
+Allow: /short_papers/index.html
+Disallow: /short_papers/
+
 Allow: /publications/index.html
 Disallow: /publications/
 
@@ -8,12 +14,6 @@ Disallow: /publications/socc22/
 
 Allow: /short_papers/ipdps2022/index.html
 Disallow: /short_papers/ipdps2022/
-
-Allow: /short_papers/index.html
-Disallow: /short_papers/
-
-Allow: /short_papers/middleware2021/index.html
-Disallow: /short_papers/middleware2021/
 
 Allow: /publications/ics2021/index.html
 Disallow: /publications/ics2021/
