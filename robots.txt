@@ -6,6 +6,9 @@ Disallow: /publications/
 Allow: /publications/socc24/index.html
 Disallow: /publications/socc24/
 
+Allow: /publications/atc24/index.html
+Disallow: /publications/atc24/
+
 Allow: /publications/ics2021/index.html
 Disallow: /publications/ics2021/
 
