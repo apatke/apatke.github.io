@@ -1,5 +1,8 @@
 User-agent: *
 
+Allow: /publications/ics2025/index.html
+Disallow: /publications/ics2025/
+
 Allow: /publications/index.html
 Disallow: /publications/
 
