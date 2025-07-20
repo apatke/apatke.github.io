@@ -1,10 +1,13 @@
 User-agent: *
 
-Allow: /publications/ics2025/index.html
-Disallow: /publications/ics2025/
+Allow: /publications/sc25/index.html
+Disallow: /publications/sc25/
 
 Allow: /publications/index.html
 Disallow: /publications/
+
+Allow: /publications/ics2025/index.html
+Disallow: /publications/ics2025/
 
 Allow: /publications/socc24/index.html
 Disallow: /publications/socc24/
